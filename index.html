@@ -333,9 +333,11 @@
                 <section data-markdown data-separator="\n-xxx-\n"  data-notes="-notes-">
                     <script type="text/template">
                     ## Moteur OGC ([démo](http://sdi.georchestra.org/geoserver/)) ###
-                    * view service
-                    * download service
-                    * traitements
+                    * view service - WMS+SLD
+                    * download service - WFS
+                    * WFS-T
+                    * KML
+                    * processing
 
                     ---
                     ![GeoServer](img/geoserver-logo.png)
@@ -353,16 +355,11 @@
 
                     -xxx-
                     ## Points d'attention ##
-                    * work/namespaces
-                        * virtual services
-                        * data access list
-                        * administration
-                        * choix déterminants pour la suite
-                    * GEOSERVER_DATA_DIR
-                        * git !
-                    * performance
-                        * [geoserver on steroids](http://blog.geoserver.org/2013/10/02/geoserver-foss4g-2013/) (Geosolutions)
-                        * [geoserver in production](http://boundlessgeo.com/whitepaper/geoserver-production-2/) (Boundless)
+                    * organiser les données par workspaces pérennes
+                    * WMS time/elevation
+                    * GEOSERVER_DATA_DIR + git !
+                    * [geoserver on steroids](http://blog.geoserver.org/2013/10/02/geoserver-foss4g-2013/) (Geosolutions)
+                    * [geoserver in production](http://boundlessgeo.com/whitepaper/geoserver-production-2/) (Boundless)
 
                     -xxx-
                     ## Par où commencer ##
@@ -384,6 +381,11 @@
                     <script type="text/template">
                     ## Cache ([démo](http://sdi.georchestra.org/geoserver/gwc/)) ###
                     * (fast) view service
+                       <br />WMTS, TMS, WMS-C
+                    * Full WMS
+                    * KML
+                    ---
+                    ![GeoServer](img/geowebcache-logo.png)
 
                     -xxx-
                     <!-- schema cache -->
@@ -392,10 +394,12 @@
 
                     -xxx-
                     ## Points d'attention ##
-                    * espace disque
-                    * grille de tuilage
-                    * charge de gestion
+                    * filesystem adapté petits fichiers x 10E6
+                    * maîtriser seed/LFU/LRU
+                    * choix des grilles de tuilage
                     * sécurité
+                    
+                    ![Tile matrix](img/WMTStilematrix.png)
 
                     -xxx-
                     ## Par où commencer ##
@@ -427,15 +431,13 @@
 
                     -xxx-
                     ## Points d'attention ##
-                    * métadonnées de service
-                    * qualité
-                        * guides CNIG
-                        * modèles
-                        * automatisation CSW transactionnel
+                    * [guides CNIG](http://cnig.gouv.fr/?page_id=2916)
+                    * ne pas oublier les métadonnées de service
+                    * automatisation par CSW transactionnel
 
                     -xxx-
                     ## Par où commencer ##
-                    s'inspirer de catalogues existants
+                    s'inspirer de métadonnées existantes
                     </script>
                 </section>
             </section>
@@ -457,6 +459,12 @@
                     -xxx-
                     <object class="stretch" data="img/schema-aviewer.svg" type="image/svg+xml">
                     </object>
+                    
+                    -xxx-
+                    ## Visualiseurs complémentaires ##
+                    1. composition sur le visualiseur avancé
+                    2. export vers un visualiseur thématique
+                    3. recomposition à tout moment
 
                     -xxx-
                     ## Points d'attention ##
@@ -466,9 +474,9 @@
 
                     -xxx-
                     ## Par où commencer ##
-                    instances existantes
-
                     <http://sdi.georchestra.org/>
+                    
+                    (demandez un compte)
                     </script>
                 </section>
 
@@ -503,7 +511,7 @@
                 <section data-markdown data-separator="\n-xxx-\n"  data-notes="-notes-">
                     <script type="text/template">
                     ## Sécurité ##
-                    * authentification
+                    * authentification IHM et M2M
                     * droits
 
                     -xxx-
@@ -513,8 +521,8 @@
 
                     -xxx-
                     ## Points d'attention ##
-                    * protéger le réseau "modules"
-                    * single point of failure ?
+                    * modules sur réseau protégé
+                    * bien étudier le *security-proxy*
                     </script>
                 </section>
             </section>
@@ -536,9 +544,9 @@
 
                     * geoserver.exe + QGIS
                     * http://sdi.georchestra.org/
-                    * objectifs et roadmap
-                    * cartographie données/services
-
+                    * => cartographie données/services
+                    * => déploiement progressif
+                    
                     -xxx-
                     ## Full geOrchestra ##
 
@@ -586,7 +594,7 @@
                     ![geOrchestra community](img/georchestra-map.png)
 
                     -xxx-
-                    ## cibles variées = enrichissement ##
+                    ## enrichissement mutuel ##
 
                     * IDS nationale, subnationales, locales
                     * recherche
@@ -603,7 +611,6 @@
                     ### GeoCom 19-20/06/2014 ###
 
                     * gamme visionneuses
-                    * fond OSM mutualisé
                     * INSPIRE
                     * sécurité des données
                     * performance et monitoring
@@ -650,6 +657,7 @@
                 * Apache http server, Apache Tomcat
                 * Jenkins, Puppet ...
                 * geOrchestra admins and SDI members
+                * images : IGN
                 ---
                 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
 
